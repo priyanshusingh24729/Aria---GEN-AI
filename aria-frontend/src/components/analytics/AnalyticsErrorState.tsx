@@ -6,7 +6,7 @@ export function AnalyticsErrorState({ message, onRetry }: { message: string; onR
   return (
     <div className="px-8 py-6">
       <EmptyState
-        icon="⚠️"
+        icon={AlertTriangle}
         title="Couldn't analyze this dataset"
         description={message}
         action={
