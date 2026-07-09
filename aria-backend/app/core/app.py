@@ -74,6 +74,7 @@ def create_app() -> FastAPI:
 
     app.include_router(api_router, prefix="/api")
 
+    STORAGE_DIR.mkdir(parents=True, exist_ok=True)
     app.mount("/static", StaticFiles(directory=STORAGE_DIR), name="static")
 
     @app.get("/health")
