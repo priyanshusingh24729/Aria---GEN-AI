@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import type { AnalysisReport } from "@/types/datacleaning";
+import type { AnalysisReport } from "@/lib/api/types";
 import { DatasetOverviewCard } from "./DatasetOverviewCard";
 import { MissingValuesCard } from "./MissingValuesCard";
 import { DuplicateCard } from "./DuplicateCard";
