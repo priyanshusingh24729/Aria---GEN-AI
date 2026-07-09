@@ -36,7 +36,7 @@ class Settings(BaseSettings):
     cors_origins: list[str] = [
     "http://localhost:3000",
     "https://agent-6a4f768db4d46d2b6d7f5927--aria-leo.netlify.app",
-    "http://aria-gen-ai-nine.vercel.app"
+    "http://aria-gen-ai-nine.vercel.app/"
 ]
     model_config = SettingsConfigDict(
         env_file=".env",
