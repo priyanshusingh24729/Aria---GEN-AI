@@ -71,3 +71,4 @@ export function useGeneralChat(): GeneralChatValue {
   if (!ctx) throw new Error("useGeneralChat must be used within GeneralChatProvider");
   return ctx;
 }
+
