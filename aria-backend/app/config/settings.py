@@ -33,11 +33,7 @@ class Settings(BaseSettings):
     skip_auth: bool = True  # set false once Supabase auth is wired up
 
     # ── CORS ───────────────────────────────────────────────────────────────
-    cors_origins: list[str] = [
-    "http://localhost:3000",
-    "https://agent-6a4f768db4d46d2b6d7f5927--aria-leo.netlify.app",
-    "http://aria-gen-ai-nine.vercel.app/"
-]
+    cors_origins: list[str] = ["http://localhost:3000","https://aria-gen-ai-nine.vercel.app"]
     model_config = SettingsConfigDict(
         env_file=".env",
         env_file_encoding="utf-8",
