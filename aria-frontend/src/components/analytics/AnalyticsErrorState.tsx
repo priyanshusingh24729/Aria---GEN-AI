@@ -1,5 +1,5 @@
 "use client";
-
+import { AlertTriangle } from "lucide-react";
 import { EmptyState } from "@/components/chat/EmptyState";
 
 export function AnalyticsErrorState({ message, onRetry }: { message: string; onRetry: () => void }) {
