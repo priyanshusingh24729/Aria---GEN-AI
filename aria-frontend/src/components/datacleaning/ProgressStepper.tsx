@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import type { DataCleaningStep } from "@/types/datacleaning";
+import type { DataCleaningStep } from "@/lib/api/types";
 
 const STEPS: { key: DataCleaningStep; label: string }[] = [
   { key: "upload", label: "Upload" },

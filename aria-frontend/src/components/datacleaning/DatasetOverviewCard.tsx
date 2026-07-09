@@ -1,7 +1,7 @@
 "use client";
 
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from "recharts";
-import type { DatasetOverview } from "@/types/datacleaning";
+import type { DatasetOverview } from "@/lib/api/types";
 
 const DTYPE_COLORS: Record<string, string> = {
   numeric: "#34d399",

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useDataCleaning } from "@/context/DataCleaningContext";
-import type { FeatureExtractionMethod } from "@/types/datacleaning";
+import type { FeatureExtractionMethod } from "@/lib/api/types";
 import { FeatureImportanceChart } from "./FeatureImportanceChart";
 
 const METHODS: { value: FeatureExtractionMethod; label: string; supervised: boolean }[] = [

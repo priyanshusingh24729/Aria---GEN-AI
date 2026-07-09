@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import type { CleaningResultItem } from "@/types/datacleaning";
+import type { CleaningResultItem } from "@/lib/api/types";
 import { EmptyState } from "./EmptyState";
 
 export function CleaningResults({ results }: { results: CleaningResultItem[] }) {

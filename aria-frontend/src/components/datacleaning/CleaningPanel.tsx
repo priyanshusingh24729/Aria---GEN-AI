@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useDataCleaning } from "@/context/DataCleaningContext";
-import type { CleaningOperation, OperationId } from "@/types/datacleaning";
+import type { CleaningOperation, OperationId } from "@/lib/api/types";
 import { RecommendationCard } from "./RecommendationCard";
 import { EmptyState } from "./EmptyState";
 

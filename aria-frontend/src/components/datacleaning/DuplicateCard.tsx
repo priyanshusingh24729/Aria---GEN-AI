@@ -1,6 +1,6 @@
 "use client";
 
-import type { DuplicateReport } from "@/types/datacleaning";
+import type { DuplicateReport } from "@/lib/api/types";
 
 export function DuplicateCard({ report }: { report: DuplicateReport }) {
   const hasIssues = report.duplicate_row_count > 0 || report.duplicate_column_count > 0;

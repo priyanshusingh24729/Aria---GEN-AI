@@ -1,7 +1,7 @@
 "use client";
 
 import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer, Tooltip, CartesianGrid } from "recharts";
-import type { MissingValuesReport } from "@/types/datacleaning";
+import type { MissingValuesReport } from "@/lib/api/types";
 import { EmptyState } from "./EmptyState";
 
 export function MissingValuesCard({ report }: { report: MissingValuesReport }) {

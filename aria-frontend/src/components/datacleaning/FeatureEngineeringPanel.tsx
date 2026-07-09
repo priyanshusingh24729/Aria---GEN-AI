@@ -8,7 +8,7 @@ import type {
   FeatureEngineeringOperation,
   FeatureEngineeringParams,
   FeatureEngineeringSuggestion,
-} from "@/types/datacleaning";
+} from "@/lib/api/types";
 import { EmptyState } from "./EmptyState";
 
 const ICONS: Record<FeatureEngineeringId, string> = {

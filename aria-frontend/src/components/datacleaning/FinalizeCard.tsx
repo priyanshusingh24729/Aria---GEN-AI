@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useDataCleaning } from "@/context/DataCleaningContext";
-import type { ExportFormat } from "@/types/datacleaning";
+import type { ExportFormat } from "@/lib/api/types";
 
 const FORMATS: { value: ExportFormat; label: string }[] = [
   { value: "csv", label: "CSV" },

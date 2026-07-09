@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import type { PreviewResponse } from "@/types/datacleaning";
+import type { PreviewResponse } from "@/lib/api/types";
 import { EmptyState } from "./EmptyState";
 
 const PAGE_SIZE = 10;

@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useDataCleaning } from "@/context/DataCleaningContext";
-import type { CleaningReport, ExportFormat } from "@/types/datacleaning";
+import type { CleaningReport, ExportFormat } from "@/lib/api/types";
 
 function Stat({ label, value }: { label: string; value: string | number }) {
   return (

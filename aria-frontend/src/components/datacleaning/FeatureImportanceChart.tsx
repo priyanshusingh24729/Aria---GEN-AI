@@ -1,7 +1,7 @@
 "use client";
 
 import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer, Tooltip, CartesianGrid, Cell } from "recharts";
-import type { FeatureImportance } from "@/types/datacleaning";
+import type { FeatureImportance } from "@/lib/api/types";
 import { EmptyState } from "./EmptyState";
 
 export function FeatureImportanceChart({ importances }: { importances: FeatureImportance[] }) {

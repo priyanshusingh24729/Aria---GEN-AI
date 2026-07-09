@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import type { Recommendation } from "@/types/datacleaning";
+import type { Recommendation } from "@/lib/api/types";
 
 const ICONS: Record<string, string> = {
   remove_duplicate_rows: "🧬",
