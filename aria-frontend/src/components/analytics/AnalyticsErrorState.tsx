@@ -1,6 +1,6 @@
 "use client";
 
-import { EmptyState } from "@/components/chat/EmptyState";
+import { EmptyState } from "@/components/datacleaning/EmptyState";
 
 export function AnalyticsErrorState({ message, onRetry }: { message: string; onRetry: () => void }) {
   return (
