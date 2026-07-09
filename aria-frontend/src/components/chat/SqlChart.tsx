@@ -20,6 +20,7 @@ import {
 import { useState, useMemo } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import type { ChartConfig } from "@/lib/api/types";
+import type { ScatterShapeProps } from "recharts";
 
 interface SqlChartProps {
   chart: ChartConfig;
@@ -493,9 +494,9 @@ export default function SqlChart({ chart }: SqlChartProps) {
                   data={dotData}
                   fill={COLORS[0]}
                   opacity={0.9}
-                  shape={(props: Record<string, unknown>) => {
-                    const cx = typeof props.cx === "number" ? props.cx : 0;
-                    const cy = typeof props.cy === "number" ? props.cy : 0;
+                  shape={(props: ScatterShapeProps) => {
+                    const cx = props.cx ?? 0;
+                    const cy = props.cy ?? 0;
                     return (
                       <circle
                         cx={cx}

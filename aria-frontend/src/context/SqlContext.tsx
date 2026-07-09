@@ -96,7 +96,7 @@ export function SqlProvider({ children }: { children: React.ReactNode }) {
             explanation: "",
           });
         } else if (event === "chart") {
-          updateLast({ chart: { ...(data as ChartConfig) } });
+          updateLast({ chart: data as unknown as ChartConfig });
         } else if (event === "chunk") {
           const content = data.content as string;
           setExchanges((prev) => {
