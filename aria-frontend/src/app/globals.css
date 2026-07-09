@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-bg text-text font-body antialiased;
+  }
+
+  /* Visible keyboard focus everywhere — never suppressed for mouse users only. */
+  :focus-visible {
+    outline: 2px solid theme("colors.accent");
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: theme("colors.border");
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: theme("colors.text-dimmer");
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Markdown content inside chat bubbles — react-markdown renders plain
+   elements, so these rules stand in for a typography plugin. */
+.prose-chat p {
+  margin: 0 0 0.6em 0;
+}
+.prose-chat p:last-child {
+  margin-bottom: 0;
+}
+.prose-chat h1,
+.prose-chat h2,
+.prose-chat h3 {
+  font-family: var(--font-syne), sans-serif;
+  font-weight: 700;
+  color: theme("colors.text");
+  margin: 1em 0 0.4em 0;
+}
+.prose-chat h1:first-child,
+.prose-chat h2:first-child,
+.prose-chat h3:first-child {
+  margin-top: 0;
+}
+.prose-chat h1 {
+  font-size: 1.15em;
+}
+.prose-chat h2 {
+  font-size: 1.08em;
+}
+.prose-chat h3 {
+  font-size: 1em;
+}
+.prose-chat ul,
+.prose-chat ol {
+  margin: 0 0 0.6em 0;
+  padding-left: 1.3em;
+}
+.prose-chat li {
+  margin: 0.2em 0;
+}
+.prose-chat ul {
+  list-style-type: disc;
+}
+.prose-chat ol {
+  list-style-type: decimal;
+}
+.prose-chat a {
+  color: theme("colors.accent2");
+  text-decoration: underline;
+  text-decoration-color: theme("colors.accent2" / 40%);
+}
+.prose-chat code {
+  background: theme("colors.surface2");
+  border: 1px solid theme("colors.border");
+  border-radius: 4px;
+  padding: 0.1em 0.35em;
+  font-size: 0.88em;
+}
+.prose-chat pre {
+  background: #0e1117;
+  border: 1px solid theme("colors.border");
+  border-radius: 8px;
+  padding: 0.8em 1em;
+  overflow-x: auto;
+  margin: 0.6em 0;
+}
+.prose-chat pre code {
+  background: none;
+  border: none;
+  padding: 0;
+}
+.prose-chat blockquote {
+  border-left: 3px solid theme("colors.border");
+  padding-left: 0.9em;
+  color: theme("colors.text-dim");
+  margin: 0.6em 0;
+}
+.prose-chat table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.6em 0;
+  font-size: 0.9em;
+}
+.prose-chat th,
+.prose-chat td {
+  border: 1px solid theme("colors.border");
+  padding: 0.4em 0.6em;
+  text-align: left;
+}
+.prose-chat th {
+  background: theme("colors.surface2");
+}
+.prose-chat strong {
+  color: theme("colors.text");
+}

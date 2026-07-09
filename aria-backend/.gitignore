@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.env
+chroma_db/
+generated_images/
+sql_temp/
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
