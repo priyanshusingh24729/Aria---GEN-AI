@@ -12,13 +12,21 @@ settings = get_settings()
 def create_app() -> FastAPI:
     app = FastAPI(title="Aria API", version="1.0.0")
     print("CORS ORIGINS:", settings.cors_origins) 
+    # app.add_middleware(
+    #     CORSMiddleware,
+    #     allow_origins=settings.cors_origins,
+    #     allow_credentials=False,
+    #     allow_methods=["*"],
+    #     allow_headers=["*"],
+    # )
+
     app.add_middleware(
-        CORSMiddleware,
-        allow_origins=settings.cors_origins,
-        allow_credentials=False,
-        allow_methods=["*"],
-        allow_headers=["*"],
-    )
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=False,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
     app.add_middleware(LoggingMiddleware)
 
     app.include_router(api_router, prefix="/api")
