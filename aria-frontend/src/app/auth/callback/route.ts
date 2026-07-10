@@ -18,6 +18,6 @@ export async function GET(request: Request) {
   }
 
   const errorUrl = new URL("/login", origin);
-  errorUrl.searchParams.set("error", "Please sign in using your credentials.");
+  errorUrl.searchParams.set("error", "Account created successfully! Please sign in using your credentials.");
   return NextResponse.redirect(errorUrl);
 }
