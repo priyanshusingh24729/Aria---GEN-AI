@@ -38,7 +38,7 @@ export function AIBackdrop() {
         className="absolute inset-0 h-full w-full object-cover opacity-70"
         autoPlay
         muted
-        // loop
+        loop
         playsInline
         preload="metadata"
       >
