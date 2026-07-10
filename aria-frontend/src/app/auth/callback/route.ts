@@ -18,6 +18,6 @@ export async function GET(request: Request) {
   }
 
   const errorUrl = new URL("/login", origin);
-  errorUrl.searchParams.set("error", "That link is invalid or has expired. Request a new one.");
+  errorUrl.searchParams.set("error", "Please sign in using your credentials.");
   return NextResponse.redirect(errorUrl);
 }
